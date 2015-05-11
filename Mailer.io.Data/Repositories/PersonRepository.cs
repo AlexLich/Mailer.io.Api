@@ -18,5 +18,10 @@ namespace Mailer.io.Data.Repositories
         {
             return context.Persons.ToList();
         }
+
+        public Person GetPerson(int id)
+        {
+            return context.Persons.FirstOrDefault(x => x.PersonId == id);
+        }
     }
 }

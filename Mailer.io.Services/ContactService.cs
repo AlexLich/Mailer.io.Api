@@ -15,6 +15,11 @@ namespace Mailer.io.Services
         public IEnumerable<Person> GetPersons()
         {
             return personRepository.GetPersons();
-        } 
+        }
+
+        public Person GetPerson(int id)
+        {
+            return personRepository.GetPerson(id);
+        }
     }
 }

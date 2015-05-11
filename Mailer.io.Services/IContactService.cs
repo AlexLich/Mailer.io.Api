@@ -6,5 +6,6 @@ namespace Mailer.io.Services
     public interface IContactService
     {
         IEnumerable<Person> GetPersons();
+        Person GetPerson(int id);
     }
 }

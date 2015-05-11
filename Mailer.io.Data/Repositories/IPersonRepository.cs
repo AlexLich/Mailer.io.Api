@@ -6,5 +6,6 @@ namespace Mailer.io.Data.Repositories
     public interface IPersonRepository
     {
         IEnumerable<Person> GetPersons();
+        Person GetPerson(int id);
     }
 }

@@ -22,5 +22,11 @@ namespace Mailer.io.Api.Controllers
             var persons = contactService.GetPersons();
             return Ok(persons);
         }
+
+        public IHttpActionResult Get(int id)
+        {
+            var person = contactService.GetPerson(id);
+            return Ok(person);
+        }
     }
 }
