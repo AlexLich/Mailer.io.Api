@@ -39,7 +39,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ContactService.cs" />
+    <Compile Include="IContactService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Mailer.io.Data\Mailer.io.Data.csproj">
+      <Project>{D79FE152-3DC7-4D2F-9367-F81AE344C1A6}</Project>
+      <Name>Mailer.io.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Mailer.io.Models\Mailer.io.Models.csproj">
+      <Project>{2396D037-4652-416A-B6F4-441D40C41178}</Project>
+      <Name>Mailer.io.Models</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

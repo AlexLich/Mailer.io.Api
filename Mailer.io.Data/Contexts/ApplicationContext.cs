@@ -1,4 +1,5 @@
-﻿using Mailer.io.Models;
+﻿using System.Data.Entity;
+using Mailer.io.Models;
 using Microsoft.AspNet.Identity.EntityFramework;
 
 namespace Mailer.io.Data.Contexts
@@ -9,5 +10,7 @@ namespace Mailer.io.Data.Contexts
             : base("ApplicationContext")
         {
         }
+
+        public DbSet<Person> Persons { get; set; }
     }
 }

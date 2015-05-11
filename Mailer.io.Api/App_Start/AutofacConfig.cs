@@ -5,6 +5,7 @@ using Autofac.Integration.WebApi;
 using Mailer.io.Api.Mappers;
 using Mailer.io.Data.Contexts;
 using Mailer.io.Data.Repositories;
+using Mailer.io.Services;
 using Owin;
 
 namespace Mailer.io.Api.App_Start
@@ -34,7 +35,8 @@ namespace Mailer.io.Api.App_Start
         {
             builder.RegisterType<ApplicationContext>().SingleInstance();
             builder.RegisterType<UserRepository>().As<IUserRepository>().AsImplementedInterfaces().InstancePerRequest();
-
+            builder.RegisterType<ContactService>().As<IContactService>().AsImplementedInterfaces().InstancePerRequest();
+            builder.RegisterType<PersonRepository>().As<IPersonRepository>().AsImplementedInterfaces().InstancePerRequest();
         }
 
     }

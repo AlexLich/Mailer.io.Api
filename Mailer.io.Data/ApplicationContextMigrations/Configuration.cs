@@ -22,28 +22,49 @@ namespace Mailer.io.Data.ApplicationContextMigrations
         {
             var userManager = new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(context));
 
-            var users = new List<ApplicationUser>()
+//            var users = new List<ApplicationUser>()
+//            {
+//                new ApplicationUser()
+//                {
+//                    UserName = "Admin",
+//                    Email = "Admin@mail.ru",
+//                    EmailConfirmed = true,
+//                    Firstname = "Админ",
+//                    Lastname = "Админович"
+//                },
+//                new ApplicationUser()
+//                {
+//                    UserName = "Test",
+//                    Email = "Test@mail.ru",
+//                    EmailConfirmed = false,
+//                    Firstname = "Тест",
+//                    Lastname = "Тестович"
+//                }
+//            };
+//
+//            userManager.Create(users[0], "Admin54321");
+//            userManager.Create(users[1], "Test54321");
+
+            var persons = new List<Person>
             {
-                new ApplicationUser()
+                new Person()
                 {
-                    UserName = "Admin",
-                    Email = "Admin@mail.ru",
-                    EmailConfirmed = true,
-                    Firstname = "Админ",
-                    Lastname = "Админович"
+                    Firstname = "Наруто",
+                    Middlename = "Наутович",
+                    Lastname = "Нарутов",
+                    Phonenumber = "8916-111-11-11"
                 },
-                new ApplicationUser()
+                new Person()
                 {
-                    UserName = "Test",
-                    Email = "Test@mail.ru",
-                    EmailConfirmed = false,
-                    Firstname = "Тест",
-                    Lastname = "Тестович"
-                }
+                    Firstname = "Сазке",
+                    Middlename = "Сазкович",
+                    Lastname = "Сазков",
+                    Phonenumber = "8916-222-22-22"
+                },
             };
 
-            userManager.Create(users[0], "Admin54321");
-            userManager.Create(users[1], "Test54321");
+            context.Persons.AddRange(persons);
+            context.SaveChanges();
 
         }
     }

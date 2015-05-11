@@ -68,10 +68,17 @@
     <Compile Include="ApplicationContextMigrations\201505061734270_Init1.Designer.cs">
       <DependentUpon>201505061734270_Init1.cs</DependentUpon>
     </Compile>
+    <Compile Include="ApplicationContextMigrations\201505102028043_addPerson.cs" />
+    <Compile Include="ApplicationContextMigrations\201505102028043_addPerson.Designer.cs">
+      <DependentUpon>201505102028043_addPerson.cs</DependentUpon>
+    </Compile>
     <Compile Include="ApplicationContextMigrations\Configuration.cs" />
     <Compile Include="Contexts\ApplicationContext.cs" />
+    <Compile Include="Contexts\MailerContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\IPersonRepository.cs" />
     <Compile Include="Repositories\IUserRepository.cs" />
+    <Compile Include="Repositories\PersonRepository.cs" />
     <Compile Include="Repositories\UserRepository.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -84,6 +91,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ApplicationContextMigrations\201505061734270_Init1.resx">
       <DependentUpon>201505061734270_Init1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ApplicationContextMigrations\201505102028043_addPerson.resx">
+      <DependentUpon>201505102028043_addPerson.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
